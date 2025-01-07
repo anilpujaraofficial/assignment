@@ -1,0 +1,6 @@
+node_modules
+yarn.lock
+.husky
+cucumber-report.json
+cypress/report
+cucumber-report.html

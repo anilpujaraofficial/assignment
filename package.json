@@ -1,0 +1,36 @@
+{
+  "name": "assignment",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^21.0.3",
+    "@cypress/webpack-preprocessor": "^6.0.2",
+    "cypress": "^13.17.0",
+    "ts-loader": "^9.5.1",
+    "webpack": "^5.97.1"
+  },
+  "devDependencies": {
+    "cucumber-html-reporter": "^7.2.0",
+    "husky": "^9.1.7",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.3.0",
+    "mochawesome-report-generator": "^6.2.0"
+  },
+  "scripts": {
+    "cy:clean:saveData": "rm -rf cypress/fixtures/TestData",
+    "cy:clean:report": "rm -rf cypress/report && mkdir cypress/report && mkdir cypress/report/mochareports && rm -rf cypress/screenshots && rm -rf cypress/videos",
+    "pretest": "npm run cy:clean:saveData && npm run cy:clean:report",
+    "cy:combine:report": "npx mochawesome-merge cypress/report/mocha/*.json -o cypress/report/mochareports/report.json",
+    "cy:generate:report": "npx marge cypress/report/mochareports/report.json  -o cypress/report/mochareports",
+    "cy:cloud:io": "npx cypress run --record --key da6877e1-a5c8-457b-a189-2a9b4c478e49 --parallel --group regression_testing --ci-build-id $BUILD_IDS",
+    "cy:flow:test": "npx cypress run --env grepTags=@flowTest",
+    "posttest": "npm run cy:combine:report && npm run cy:generate:report",
+    "prepare": "husky"
+  },
+  "cypress-cucumber-preprocessor": {
+    "json": {
+      "enabled": true
+    }
+  }
+}
