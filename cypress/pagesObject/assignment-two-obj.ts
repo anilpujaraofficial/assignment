@@ -70,7 +70,9 @@ export class AssignmentTwoObj {
   }
 
   assert_username(filePath) {
-    this.APILogin(filePath);
-    cy.reload();
+    command.navigate(getEnvVariables("url"));
+    cy.readFile(filePath).then((res) => {
+      command.verifyContains(xpath.homePage().username, res.username.value);
+    });
   }
 }

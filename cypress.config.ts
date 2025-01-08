@@ -89,7 +89,7 @@ export default defineConfig({
     env: {
       testEnv: "qa",
       qa: {
-        url: "",
+        url: "https://bookcart.azurewebsites.net/",
         apiUrl: "https://bookcart.azurewebsites.net/api",
         username: "",
         password: "",
@@ -98,6 +98,7 @@ export default defineConfig({
         url: "",
         username: "",
         password: "",
+        apiUrl: "",
       },
     },
   },

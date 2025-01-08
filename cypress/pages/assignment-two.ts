@@ -17,4 +17,9 @@ export class AssignmentTwo {
         return `input[formcontrolname='${val}']`;
     }
   }
+  homePage() {
+    return {
+      username: "span.mdc-button__label > span",
+    };
+  }
 }
