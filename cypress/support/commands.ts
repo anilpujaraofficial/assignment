@@ -25,16 +25,6 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 //
-// declare global {
-//   namespace Cypress {
-//     interface Chainable {
-//       login(email: string, password: string): Chainable<void>
-//       drag(subject: string, options?: Partial<TypeOptions>): Chainable<Element>
-//       dismiss(subject: string, options?: Partial<TypeOptions>): Chainable<Element>
-//       visit(originalFn: CommandOriginalFn, url: string, options: Partial<VisitOptions>): Chainable<Element>
-//     }
-//   }
-// }
 
 /**
  *
@@ -43,4 +33,23 @@
  */
 export function getEnvVariables(value) {
   return Cypress.env(Cypress.env("testEnv"))[value];
+}
+
+// ! remove directory
+Cypress.Commands.add("rmDir", (dirPath) => {
+  cy.task("checkFileExists", dirPath).then((data) => {
+    if (data) {
+      cy.task("removeDirectory", dirPath);
+    } else {
+      cy.log("directory not found");
+    }
+  });
+});
+
+declare global {
+  namespace Cypress {
+    interface Chainable {
+      rmDir(filepath: string): Chainable<void>;
+    }
+  }
 }

@@ -6,6 +6,7 @@
   "dependencies": {
     "@badeball/cypress-cucumber-preprocessor": "^21.0.3",
     "@cypress/webpack-preprocessor": "^6.0.2",
+    "@faker-js/faker": "^9.3.0",
     "cypress": "^13.17.0",
     "ts-loader": "^9.5.1",
     "webpack": "^5.97.1"

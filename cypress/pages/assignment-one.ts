@@ -1,25 +1,3 @@
-// export class AssignmentOne {
-
-//   button() {
-//     return {
-//       xpath: {
-//         searchIcon: "button[class='ytSearchboxComponentSearchButton']",
-//       },
-//       value: {},
-//     };
-//   }
-
-//   form() {
-//     return {
-//       xpath: {
-//         search_query:
-//           "div.ytSearchboxComponentInputBox input[name$='search_query']",
-//       },
-//       value: {},
-//     };
-//   }
-// }
-
 export let AssignmentOne = {
   xpath: {
     searchIcon: "button[class='ytSearchboxComponentSearchButton']",

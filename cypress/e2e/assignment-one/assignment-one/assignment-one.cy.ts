@@ -1,11 +1,8 @@
-import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
+import { Given, Then } from "@badeball/cypress-cucumber-preprocessor";
 import { AssignmentOneObj } from "../../../pagesObject/assignment-one-Obj";
 
 let assignmentOneObj = new AssignmentOneObj();
 
-before(() => {
-  Cypress.session.clearAllSavedSessions();
-});
 Given("Navigate to {string}", (url: string) => {
   assignmentOneObj.navigate_to_youtube(url);
 });

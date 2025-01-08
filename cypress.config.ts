@@ -33,6 +33,7 @@ async function setupNodeEvents(
     })
   );
 
+  //!----------check file exists-----------------------------
   on("task", {
     checkFileExists(filepath: string) {
       if (fs.existsSync(filepath)) {
@@ -40,6 +41,19 @@ async function setupNodeEvents(
       } else {
         return false;
       }
+    },
+  });
+  // !-------------------------remove directory--------------------
+  on("task", {
+    removeDirectory(fileDir: string) {
+      return new Promise((resolve, reject) => {
+        fs.rmdir(fileDir, { recursive: true }, (err: boolean) => {
+          if (err) {
+            return reject(err);
+          }
+          resolve(null);
+        });
+      });
     },
   });
 
@@ -76,6 +90,7 @@ export default defineConfig({
       testEnv: "qa",
       qa: {
         url: "",
+        apiUrl: "https://bookcart.azurewebsites.net/api",
         username: "",
         password: "",
       },

@@ -6,7 +6,7 @@ let xpath = AssignmentOne;
 
 export class AssignmentOneObj {
   navigate_to_youtube(url: string) {
-    cy.visit(url).url().should("include", url);
+    command.navigate(url);
   }
 
   search_text(text) {
