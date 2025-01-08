@@ -6,5 +6,5 @@
     "types": ["cypress", "node"],
     "allowSyntheticDefaultImports": true
   },
-  "include": ["**/*.ts", "report.ts"]
+  "include": ["**/*.ts", "report_gen.ts"]
 }
