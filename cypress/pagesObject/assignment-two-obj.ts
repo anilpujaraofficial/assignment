@@ -65,6 +65,7 @@ export class AssignmentTwoObj {
         expect(res.statusText).to.eq("OK");
         expect(res.status).to.eq(200);
         window.localStorage.setItem("authToken", res.body.token);
+        cy.reload();
       });
     });
   }
