@@ -1,4 +1,4 @@
-Feature: Assignment 2:
+Feature: Assignment
 
   Scenario: Login via API and Assert Username
     Given Navigate to this URL "https://bookcart.azurewebsites.net/"
