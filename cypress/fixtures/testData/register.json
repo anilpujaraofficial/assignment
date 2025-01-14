@@ -1,0 +1,26 @@
+{
+  "firstname": {
+    "value": "Roob",
+    "type": "input"
+  },
+  "lastname": {
+    "value": "Louvenia",
+    "type": "input"
+  },
+  "username": {
+    "value": "Rooblouvenia",
+    "type": "input"
+  },
+  "password": {
+    "value": "Admin@123",
+    "type": "input"
+  },
+  "confirmPassword": {
+    "value": "Admin@123",
+    "type": "input"
+  },
+  "gender": {
+    "value": "Male",
+    "type": "radio"
+  }
+}
