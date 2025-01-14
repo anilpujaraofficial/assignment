@@ -24,7 +24,7 @@
     "pretest": "npm run cy:clean:saveData && npm run cy:clean:report",
     "cy:combine:report": "npx mochawesome-merge cypress/report/mocha/*.json -o cypress/report/mochareports/report.json",
     "cy:generate:report": "npx marge cypress/report/mochareports/report.json  -o cypress/report/mochareports",
-    "cy:cloud:io": "npx cypress run --record --key da6877e1-a5c8-457b-a189-2a9b4c478e49 --parallel --group regression_testing --ci-build-id $BUILD_IDS",
+    "cy:cloud:io": "npx cypress run --record --key 04aa5fb0-a386-4483-a09a-6546c30e036d --parallel --group regression_testing --ci-build-id $BUILD_IDS",
     "cy:flow:test": "npx cypress run --env grepTags=@flowTest",
     "posttest": "npm run cy:combine:report && npm run cy:generate:report",
     "prepare": "husky"

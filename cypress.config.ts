@@ -64,6 +64,7 @@ export default defineConfig({
   e2e: {
     setupNodeEvents,
     specPattern: "**/*.feature",
+    excludeSpecPattern: ["cypress/e2e/assignment-one"],
     chromeWebSecurity: false,
     includeShadowDom: true,
     video: true,
@@ -84,6 +85,8 @@ export default defineConfig({
       inlineAssets: true,
       timestamp: "yyyy-mm-dd_HH-MM-ss",
     },
+    //cypress dashboard
+    projectId: "oycui9",
 
     //Env define
     env: {

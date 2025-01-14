@@ -1,6 +1,6 @@
 import { Given, Then } from "@badeball/cypress-cucumber-preprocessor";
-import { AssignmentTwoObj } from "../../../pagesObject/assignment-two-obj";
-import { filePath } from "../../../utils/filePath/filePath";
+import { AssignmentTwoObj } from "../../../../pagesObject/assignment-two-obj";
+import { filePath } from "../../../../utils/filePath/filePath";
 let assignmentOTwoObj = new AssignmentTwoObj();
 
 Given("Navigate to this URL {string}", (url) => {
