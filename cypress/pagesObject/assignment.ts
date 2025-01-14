@@ -1,5 +1,5 @@
 import { Command } from "../utils/command";
-import { AssignmentTwo } from "../pages/assignment-two";
+import { AssignmentTwo } from "../pages/assignment";
 import { register } from "../utils/faker/faker";
 import { getEnvVariables } from "../support/commands";
 
