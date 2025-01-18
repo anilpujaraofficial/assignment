@@ -19,6 +19,10 @@
     "mochawesome-report-generator": "^6.2.0"
   },
   "scripts": {
+    "cy:node": "node -v",
+    "cy:verify": "npx cypress verify",
+    "start": "yarn && npx cypress open --browser electron",
+    "cy:run": "yarn && npx cypress open",
     "cy:clean:saveData": "rm -rf cypress/fixtures/TestData",
     "cy:clean:report": "rm -rf cypress/report && mkdir cypress/report && mkdir cypress/report/mochareports && rm -rf cypress/screenshots && rm -rf cypress/videos",
     "pretest": "npm run cy:clean:saveData && npm run cy:clean:report",
